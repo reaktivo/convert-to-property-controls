@@ -2,6 +2,7 @@ import convertToPropertyControls from ".";
 import PropTypes from "prop-types";
 
 const propTypes = {
+  active: PropTypes.bool,
   title: PropTypes.string,
   tintColor: PropTypes.string,
   options: PropTypes.oneOf(["one", "two", "three"]),
@@ -9,6 +10,15 @@ const propTypes = {
 };
 
 describe("convertToPropertyControls", () => {
+  it("should convert to bool", () => {
+    const result = convertToPropertyControls(propTypes);
+    expect(result.active).toEqual({
+      disabledTitle: "False",
+      enabledTitle: "True",
+      type: "Boolean"
+    });
+  });
+
   it("should convert to strings", () => {
     const result = convertToPropertyControls(propTypes);
     expect(result.title).toEqual({ title: "Title", type: "String" });

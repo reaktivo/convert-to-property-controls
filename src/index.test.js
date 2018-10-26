@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 const propTypes = {
   title: PropTypes.string,
   tintColor: PropTypes.string,
-  options: PropTypes.oneOf(["one", "two", "three"])
+  options: PropTypes.oneOf(["one", "two", "three"]),
+  value: PropTypes.number
 };
 
 describe("convertToPropertyControls", () => {
@@ -26,5 +27,10 @@ describe("convertToPropertyControls", () => {
       title: "Options",
       type: "Enum"
     });
+  });
+
+  it("should convert to numbers", () => {
+    const result = convertToPropertyControls(propTypes);
+    expect(result.value).toEqual({ title: "Value", type: "Number" });
   });
 });

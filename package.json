@@ -7,7 +7,7 @@
     "build": "babel src -d dist",
     "precommit": "lint-staged",
     "prepublish": "npm run -s build",
-    "test": "jest src/**/*.test.js"
+    "test": "jest src"
   },
   "dependencies": {
     "@reaktivo/spy-on-prop-types": "^1.0.4",

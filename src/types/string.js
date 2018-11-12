@@ -1,6 +1,6 @@
 import startCase from "lodash.startcase";
 
-const colorRe = /color/gi;
+const colorRe = /colou?r/gi;
 
 export default function string(prop, propName) {
   if (propName.match(colorRe)) {

@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "",
   "main": "index.js",
+  "author": "Marcel Miranda <m@reaktivo.com>",
   "scripts": {
     "build": "babel src -d dist",
     "precommit": "lint-staged",
@@ -34,5 +35,5 @@
       "git add"
     ]
   },
-  "license": "ISC"
+  "license": "MIT"
 }

@@ -9,6 +9,10 @@
     "prepublish": "npm run -s build",
     "test": "jest src"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reaktivo/convert-to-property-controls.git"
+  },
   "dependencies": {
     "@reaktivo/spy-on-prop-types": "^1.0.4",
     "lodash.startcase": "^4.4.0",
